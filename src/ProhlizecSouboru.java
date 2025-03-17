@@ -27,7 +27,7 @@ public class ProhlizecSouboru extends JFrame {
         JScrollPane scrollPane = new JScrollPane(ta1);
         panMain.add(scrollPane, BorderLayout.CENTER);
 
-        setSize(300, 300);
+        setSize(600, 600);
     }
 
     private void initMenu() {
