@@ -51,10 +51,10 @@ public class ProhlizecSouboru extends JFrame {
     }
 
    private void openFile() {
-        JFileChooser fileChooser = new JFileChooser();
-        int result = fileChooser.showOpenDialog(this);
+        JFileChooser fc = new JFileChooser();
+        int result = fc.showOpenDialog(this);
         if (result == JFileChooser.APPROVE_OPTION) {
-            currentFile = fileChooser.getSelectedFile();
+            currentFile = fc.getSelectedFile();
             try {
                 Scanner scanner = new Scanner(currentFile);
                 String content = "";
@@ -84,10 +84,10 @@ public class ProhlizecSouboru extends JFrame {
     }
 
     private void saveFileAs() {
-        JFileChooser fileChooser = new JFileChooser();
-        int result = fileChooser.showSaveDialog(this);
+        JFileChooser fc = new JFileChooser();
+        int result = fc.showSaveDialog(this);
         if (result == JFileChooser.APPROVE_OPTION) {
-            currentFile = fileChooser.getSelectedFile();
+            currentFile = fc.getSelectedFile();
             try {
                 FileWriter writer = new FileWriter(currentFile);
                 writer.write(ta1.getText());
