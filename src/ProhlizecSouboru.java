@@ -51,7 +51,7 @@ public class ProhlizecSouboru extends JFrame {
     }
 
    private void openFile() {
-        JFileChooser fc = new JFileChooser();
+        JFileChooser fc = new JFileChooser(".");
         int result = fc.showOpenDialog(this);
         if (result == JFileChooser.APPROVE_OPTION) {
             currentFile = fc.getSelectedFile();
