@@ -20,15 +20,14 @@ public class ProhlizecSouboru extends JFrame {
         panMain.setLayout(new BorderLayout());
         setContentPane(panMain);
         initMenu();
-        setSize(600, 400);
 
-        ofbt = new JButton("Open...");
         ofbt.addActionListener(e -> openFile());
         panMain.add(ofbt, BorderLayout.NORTH);
 
-        ta1 = new JTextArea();
         JScrollPane scrollPane = new JScrollPane(ta1);
         panMain.add(scrollPane, BorderLayout.CENTER);
+
+        pack();
     }
 
     private void initMenu() {
