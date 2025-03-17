@@ -27,27 +27,27 @@ public class ProhlizecSouboru extends JFrame {
         JScrollPane scrollPane = new JScrollPane(ta1);
         panMain.add(scrollPane, BorderLayout.CENTER);
 
-        pack();
+        setSize(300, 300);
     }
 
     private void initMenu() {
         JMenuBar menuBar = new JMenuBar();
         setJMenuBar(menuBar);
 
-        JMenu akceMenu = new JMenu("Akce");
-        menuBar.add(akceMenu);
+        JMenu fileMenu = new JMenu("File");
+        menuBar.add(fileMenu);
 
         JMenuItem openItem = new JMenuItem("Open...");
         openItem.addActionListener(e -> openFile());
-        akceMenu.add(openItem);
+        fileMenu.add(openItem);
 
         JMenuItem saveItem = new JMenuItem("Save");
         saveItem.addActionListener(e -> saveFile());
-        akceMenu.add(saveItem);
+        fileMenu.add(saveItem);
 
         JMenuItem saveAsItem = new JMenuItem("Save as...");
         saveAsItem.addActionListener(e -> saveFileAs());
-        akceMenu.add(saveAsItem);
+        fileMenu.add(saveAsItem);
     }
 
    private void openFile() {
